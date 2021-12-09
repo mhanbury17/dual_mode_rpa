@@ -1,0 +1,51 @@
+; Enables waveform radix 1 1 1 44 44
+
+io i i i ii ii
+
+vname CLK CTRL RESET A0 A1 A2 A3 A4 A5 A6 A7
+vname1 CLK CTRL RESET B0 B1 B2 B3 B4 B5 B6 B7 B8 B9
+
+tunit ns
+period 1
+; trise specifies the rise time of each input vector.
+trise 0.05
+; tfall specifies the fall time of each input vector.
+tfall 0.05
+
+vih 1.2
+vil 0
+;CLK	CTRL	RESET	A0	A1	A2	A3	A4	A5	A6	A7	 
+0	0	0	00	00	00	00	00	00	00	00
+1	0	0	00	00	00	00	00	00	00	00
+0	1	1	40	40	40	40	40	40	40	40			
+1	1	1	40	40	40	40	40 	40	40	40
+
+;CLK    CTRL    RESET   B0      B1      B2      B3      B4      B5      B6      B7              
+0       0       0       00      00      00      00      00      00      00      00
+1       0       0       00      00      00      00      00      00      00      00
+0       1       1       00      00      00      00      00      00      00      00
+1       1       1       00      00      00      00      00      00      00      00
+	
+
+
+;Original Files with vectors
+;output_wf 1
+
+
+;radix 44 44 1 1 1 1 44
+;vname A<7:0> B<7:0> CTRL RESET CLK CLK_BAR S_REG<7:0>
+;io ii ii i i i i o}o
+
+;tunit ns
+;period 1
+
+;trise 0.05
+;tfall 0.05
+;vih 1.2
+;vil 0
+
+;A<7:0>		B<7:0>	CTRL	RESET	CLK	CLK_BAR	S_REG<7:0>
+;00		00	0	0	0	1	00
+;00		00	0	0	1	0	00
+;01		01	0	0	0	1	00
+;01		01	0	0	1	0	02
